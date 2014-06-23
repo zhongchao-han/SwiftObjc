@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  SwiftObjc
-//
-//  Created by han_zc on 14/6/23.
-//  Copyright (c) 2014年 hanzc. All rights reserved.
-//
 
 import UIKit
 
@@ -16,9 +9,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        // Override point for customization after application launch.
-        self.window!.backgroundColor = UIColor.whiteColor()
-        self.window!.makeKeyAndVisible()
+
+        var redView = RedView(frame:CGRectMake(0.0, 0.0,100.0, 100.0));
+        self.window!.addSubview(redView);
+        
+        self.window!.backgroundColor = UIColor.blackColor()
+        self.window?.makeKeyAndVisible()
         return true
     }
 

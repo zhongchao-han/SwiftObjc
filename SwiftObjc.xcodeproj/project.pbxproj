@@ -10,6 +10,8 @@
 		29056B031957FBB300F07DF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29056B021957FBB300F07DF8 /* AppDelegate.swift */; };
 		29056B051957FBB300F07DF8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29056B041957FBB300F07DF8 /* Images.xcassets */; };
 		29056B111957FBB300F07DF8 /* SwiftObjcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29056B101957FBB300F07DF8 /* SwiftObjcTests.swift */; };
+		29056B1F1957FCB400F07DF8 /* RedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29056B1E1957FCB400F07DF8 /* RedView.m */; };
+		29056B211957FE5D00F07DF8 /* GreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29056B201957FE5D00F07DF8 /* GreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +32,10 @@
 		29056B0A1957FBB300F07DF8 /* SwiftObjcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftObjcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		29056B0F1957FBB300F07DF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29056B101957FBB300F07DF8 /* SwiftObjcTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftObjcTests.swift; sourceTree = "<group>"; };
+		29056B1A1957FC8B00F07DF8 /* SwiftObjc-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftObjc-Bridging-Header.h"; sourceTree = "<group>"; };
+		29056B1D1957FCB400F07DF8 /* RedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedView.h; sourceTree = "<group>"; };
+		29056B1E1957FCB400F07DF8 /* RedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedView.m; sourceTree = "<group>"; };
+		29056B201957FE5D00F07DF8 /* GreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,10 @@
 				29056B021957FBB300F07DF8 /* AppDelegate.swift */,
 				29056B041957FBB300F07DF8 /* Images.xcassets */,
 				29056B001957FBB300F07DF8 /* Supporting Files */,
+				29056B1A1957FC8B00F07DF8 /* SwiftObjc-Bridging-Header.h */,
+				29056B1D1957FCB400F07DF8 /* RedView.h */,
+				29056B1E1957FCB400F07DF8 /* RedView.m */,
+				29056B201957FE5D00F07DF8 /* GreenView.swift */,
 			);
 			path = SwiftObjc;
 			sourceTree = "<group>";
@@ -200,6 +210,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29056B211957FE5D00F07DF8 /* GreenView.swift in Sources */,
+				29056B1F1957FCB400F07DF8 /* RedView.m in Sources */,
 				29056B031957FBB300F07DF8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,9 +317,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftObjc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftObjc/SwiftObjc-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -316,9 +331,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftObjc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftObjc/SwiftObjc-Bridging-Header.h";
 			};
 			name = Release;
 		};
